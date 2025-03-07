@@ -16,7 +16,7 @@ class User{
         echo "<H2> Создан пользователь с параметрами: </H2>";
         echo "<p> Имя: $name </p>";
         echo "<p> Логин: $login </p>";
-        echo "<p> Пароль: $password </p>"; 
+        echo "<p> Пароль: $password </p>"; #password_hash используется для хеширования пароля перед выводом
     }
 
     public function getPassword() {
