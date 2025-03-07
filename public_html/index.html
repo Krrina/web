@@ -5,18 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>апчхи</title>
     <style>
+        /* Общие стили */
+        body {
+            background-color: #F5F0E1; /* Молочно-кофейный цвет */
+            margin: 0; /* Убираем отступы по умолчанию у body */
+            font-family: sans-serif; /* Выбираем шрифт (можно настроить) */
+        }
+
         /* Стиль для полоски */
         .top-bar {
-            background-color: #333; /* Коричневый цвет (или любой другой) */
+            background-color: #333; /* Коричневый цвет */
             height: 40px; /* Высота полоски */
             width: 100%; /* Ширина на всю страницу */
         }
 
         /* Дополнительный стиль для контента (чтобы не прилипал к полоске) */
         main {
-            padding-top: 20px; /* Отступ сверху */
+            padding-top: 10px; /* Отступ сверху */
             padding-left: 20px; /* Отступ слева, чтобы отодвинуть контент от края*/
         }
+
+        /* Стили для маркированного списка */
+        .custom-list {
+            list-style-type: disc; /* Тип маркера (disc, circle, square, decimal, и т.д.) */
+            list-style-position: outside; /* Положение маркера (outside или inside) */
+            padding-left: 20px; /* Отступ слева для текста списка */
+            margin-bottom: 20px; /* Отступ снизу для списка */
+            color: #553311; /* Коричневый цвет для текста списка и маркеров */
+        }
+
+        /* Стили для ссылок */
+        .custom-list a {
+            text-decoration: none; /* Убрать подчеркивание у ссылок */
+            color: #553311; /* Коричневый цвет для ссылок */
+        }
+
+        /* Стиль для заголовка (по желанию) */
+        h1 {
+            color: #553311; /* Цвет заголовка (можно настроить) */
+        }
+
+        /* Стиль для кофейного зернышка */
+        .coffee-bean {
+            position: fixed; /* Фиксированное положение относительно окна браузера */
+            bottom: 10px; /* Отступ от нижнего края */
+            right: 10px; /* Отступ от правого края */
+            width: 50px; /* Ширина изображения */
+            height: auto; /* Автоматическая высота (сохранение пропорций) */
+            z-index: 1000; /* Отображение поверх всего остального контента */
+        }
+
     </style>
 </head>
 <body>
@@ -24,9 +62,20 @@
     <div class="top-bar"></div>
 
     <main>
-        <h1>Контент страницы</h1>
-        <p>Здесь будет основной контент страницы.</p>
+        <h1>Лабы</h1>
+        <ul class="custom-list">
+            <li><a href="MyProject/Classes/User.php" title="Классы и интерфейсы">Лаба 1</a></li>
+            <li><a href="lab2.html" title="Паттерны проектирования">Лаба 2</a></li>
+            <li><a href="lab3.html">Лаба 3</a></li>
+            <li><a href="lab4.html">Лаба 4</a></li>
+            <li><a href="lab5.html">Лаба 5</a></li>
+            <li><a href="lab6.html">Лаба 6</a></li>
+            <li><a href="lab7.html">Лаба 7</a></li>
+            <li><a href="lab8.html">Лаба 8</a></li>
+        </ul>
     </main>
+
+    <img src="pngwing.com.png" alt="Кофейное зерно" class="coffee-bean">
 
 </body>
 </html>
