@@ -5,28 +5,28 @@ skinparam class {
     ArrowColor #333
 }
 
-class AbstractUser {
-  + {field} name: string
-  + {field} login: string
-  # {field} password: string
-  + {method} __construct(name, login, password)
+abstract class AbstractUser {
+  + name: string
+  + login: string
+  # password: string
+  + __construct(name, login, password)
   + {abstract} showInfo()
-  + {method} __destruct()
+  + __destruct()
 }
 
 class User {
-  + {static} count: int = 0
-  + {method} showInfo()
+  + {static} count: int
+  + showInfo()
 }
 
 class SuperUser {
-  + {static} count: int = 0
-  + {field} role: string
-  + {method} getInfo(): array
+  + {static} count: int
+  + role: string
+  + getInfo(): array
 }
 
 interface SuperUserInterface {
-  + {method} getInfo(): array
+  + getInfo(): array
 }
 
 AbstractUser <|-- User
