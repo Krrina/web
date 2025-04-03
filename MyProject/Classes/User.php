@@ -20,5 +20,3 @@ require_once __DIR__ . '/AbstractUser.php';
 }
   
 ?>
-
-?>
