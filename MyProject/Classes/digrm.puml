@@ -1,0 +1,36 @@
+@startuml UML
+skinparam class {
+    BackgroundColor White
+    BorderColor #333
+    ArrowColor #333
+}
+
+class AbstractUser {
+  + {field} name: string
+  + {field} login: string
+  # {field} password: string
+  + {method} __construct(name, login, password)
+  + {abstract} showInfo()
+  + {method} __destruct()
+}
+
+class User {
+  + {static} count: int = 0
+  + {method} showInfo()
+}
+
+class SuperUser {
+  + {static} count: int = 0
+  + {field} role: string
+  + {method} getInfo(): array
+}
+
+interface SuperUserInterface {
+  + {method} getInfo(): array
+}
+
+AbstractUser <|-- User
+User <|-- SuperUser
+SuperUserInterface <|.. SuperUser
+
+@enduml

@@ -1,32 +1,24 @@
 <?php
+
 namespace MyProject\Classes;
+require_once __DIR__ . '/AbstractUser.php';
 
-class User{
-    public $name;
-    public $login;
-    private $password;
 
-    public function __construct($name, $login, $password) {
-        $this->name = $name;
-        $this->login = $login;
-        $this->password = $password; 
-    }
-
-    public function showinfo(){
-        echo "<H2> Создан пользователь с параметрами: </H2>";
-        echo "<p> Имя: $name </p>";
-        echo "<p> Логин: $login </p>";
-        echo "<p> Пароль: $password </p>"; #password_hash используется для хеширования пароля перед выводом
-    }
-
-    public function getPassword() {
-            return $this->password;
+  class User extends AbstractUser {
+      public static $count = 0;
+    
+   public function showInfo() {
+        echo "<p> Имя: $this->name </p>";
+        echo "<p> Логин: $this->login </p>";
+        #echo "Пароль: ". password_hash($this->password, PASSWORD_DEFAULT); #хеширует пароль
+        echo "<p> Пароль: [скрыт] </p>";
+         if (get_class($this) === __CLASS__) {
+            self::$count++;
         }
-
-        public function setPassword($password) {
-         $this->password = $password;
-        }
+    }
+    
 }
-
+  
+?>
 
 ?>
