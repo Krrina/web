@@ -2,10 +2,6 @@
 
 namespace MyProject\Classes;
 
-
-require_once __DIR__ . '/User.php';
-require_once __DIR__ . '/SuperUserInterface.php';
-
 class SuperUser extends User implements SuperUserInterface{
     public static $count = 0;
     public $role;

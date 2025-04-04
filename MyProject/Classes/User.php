@@ -1,7 +1,6 @@
 <?php
 
 namespace MyProject\Classes;
-require_once __DIR__ . '/AbstractUser.php';
 
 
   class User extends AbstractUser {
