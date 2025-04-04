@@ -47,4 +47,5 @@ echo "<h2>Массив:</h2>";
 
    
  echo "</pre>";
-?>
+?>git pull --ff-only --tags origin main
+
