@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>апчхи</title>
     <style>
-
         body {
             background-color: #F5F0E1; 
             margin: 0; 
@@ -14,35 +13,34 @@
 
         .top-bar {
             background-color: #333; 
-            height: 40px;
+            height: 40px; 
             width: 100%; 
         }
 
         main {
-            padding-top: 10px; 
+            padding-top: 10px;
             padding-left: 20px; 
         }
 
         .custom-list {
-            list-style-type: disc; 
+            list-style-type: disc;
             list-style-position: outside; 
             padding-left: 20px; 
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
             color: #553311; 
         }
-
-
+       
         .custom-list a {
             text-decoration: none; 
             color: #553311; 
         }
-
+      
         h1 {
             color: #553311; 
         }
-
+        
         .coffee-bean {
-            position: fixed; 
+            position: fixed;
             bottom: 10px; 
             right: 10px; 
             width: 50px; 
@@ -50,6 +48,77 @@
             z-index: 1000; 
         }
 
+        .corner-icon {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            z-index: 1000;
+        }
+
+        .corner-icon:hover {
+            transform: scale(1.2);
+        }
+
+        main {
+            padding: 20px;
+        }
+        
+        .coffee-bean:active {
+            transform: scale(0.95);
+        }
+        
+        /* Стили для выпадающего списка */
+        .dropdown {
+            position: relative;
+            display: list-item;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            max-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
+            overflow-y: auto;
+            max-height: 70vh;
+            left: 0;
+            right: auto;
+        }
+        
+        .dropdown-content a {
+            color: #553311;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .dropdown-content {
+                right: 0;
+                left: auto;
+                max-width: 90vw;
+            }
+        }
     </style>
 </head>
 <body>
@@ -59,18 +128,71 @@
     <main>
         <h1>Лабы</h1>
         <ul class="custom-list">
-            <li><a href="MyProject/Classes/User.php" title="Классы и интерфейсы">Лаба 1</a></li>
-            <li><a href="lab2.html" title="Паттерны проектирования">Лаба 2</a></li>
-            <li><a href="lab3.html">Лаба 3</a></li>
+            <li><a href="MyProject/Classes/lab1.php" title="Классы и интерфейсы">Лаба 1</a></li>
+            <li class="dropdown">
+                <a href="lab2.html" title="Паттерны проектирования">Лаба 2</a>
+                <div class="dropdown-content">
+                    <a href="/MyProject/lab2/src/RefactoringGuru/AbstractFactory/Conceptual/index.php">AbstractFactory</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Adapter/Conceptual/index.php">Adapter</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Bridge/Conceptual/index.php">Bridge</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Builder/Conceptual/index.php">Builder</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/ChainOfResponsibility/Conceptual/index.php">ChainOfResponsibility</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Command/Conceptual/index.php">Command</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Composite/Conceptual/index.php">Composite</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Decorator/Conceptual/index.php">Decorator</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Facade/Conceptual/index.php">Facade</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/FactoryMethod/Conceptual/index.php">FactoryMethod</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Flyweight/Conceptual/index.php">Flyweight</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Interpreter/RealWorld/index.php">Interpreter/RealWorld</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Iterator/Conceptual/index.php">Iterator</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Mediator/Conceptual/index.php">Mediator</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Memento/Conceptual/index.php">Memento/Conceptual</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Observer/Conceptual/index.php">Observer</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Prototype/Conceptual/index.php">Prototype</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Proxy/Conceptual/index.php">Proxy</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Singleton/Conceptual/index.php">Singleton</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/State/Conceptual/index.php">State/Conceptual</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Strategy/Conceptual/index.php">Strategy</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/TemplateMethod/Conceptual/index.php">TemplateMethod</a>
+                    <a href="/MyProject/lab2/src/RefactoringGuru/Visitor/Conceptual/index.php">Visitor</a>
+                </div>
+            </li>
+                        <li class="dropdown">
+                <a href="lab2.html" title="Паттерн Модель-Представление-Контроллер">Лаба 3</a>
+                <div class="dropdown-content">
+                    <a href="/MyProject/lab3/patterns/settings_use.php">1</a>
+                    <a href="/MyProject/lab3/patterns/factory_use.php">2</a>
+                    <a href="/MyProject/lab3/patterns/mvc_use.php">3</a>
+                </div>
+            </li>
             <li><a href="lab4.html">Лаба 4</a></li>
             <li><a href="lab5.html">Лаба 5</a></li>
             <li><a href="lab6.html">Лаба 6</a></li>
-            <li><a href="lab7.html">Лаба 7</a></li>
-            <li><a href="lab8.html">Лаба 8</a></li>
         </ul>
     </main>
 
-    <img src="pngwing.com.png" alt="Кофейное зерно" class="coffee-bean">
+    <audio id="coffeeSound" preload="auto">
+        <source src="https://drive.google.com/file/d/1sKR4z3LaQaja6chw0n7wrFb_9kl6ASzB/view?usp=sharing" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.getElementById('coffeeBean').addEventListener('click', function() {
+            var sound = document.getElementById('coffeeSound');
+            sound.currentTime = 0; // Перематываем звук в начало
+            sound.play();
+
+            this.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.1)';
+            }, 100);
+        });
+    </script>
+
+    <img src="pngwing.com.png" alt="Кофейное зерно" class="coffee-bean" id="coffeeBean">
+    
+    <a href="https://uml.planttext.com/plantuml/png/ZP8zQyCm48PtWVx3GPQO9bcycGn9EmNQgOIEuIehZeWjcPECAOx_UzLASPHIIhNTU_S-zu4srY6vhgbX__BCcJqhtI9X0w96Qs7W3FnxH76ko7IwV3Ar8NWxAITZob0fASYpFC-3kYKoVIgEd766xzOH2XVXsnZkhQJGwG4qDh80hojT1QKsbTAfD8FMktlVzxxmS116Uw4JRlw5MGJhOYhFGjrm7MC4UpBzJX_DFBiYIXa9MPmvZ9gEEFYJEIL64FuWhW2bNKYajCJxshMI_WKWK_zOlf8k40j08lo8OE-GT4GXR_3T90r_Mk-Elhuibz-xSNQB9oHdlz3NbzKgBU5i8tNfFz0d" target="_blank">
+        <img src="https://sun9-9.userapi.com/impg/ZJU5MBTIXtG3h30jTPfy6RAfKuRMVsFUIDSj7w/ltMu6Aed5dI.jpg?size=382x327&quality=95&sign=9f6f7e45b55567f04c426789c96dddba&type=album" alt="Иконка" class="corner-icon" title="beep-beep">
+    </a>
 
 </body>
 </html>
